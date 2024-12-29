@@ -46,5 +46,10 @@ namespace YUMMY.Net.Controllers
             var values = context.testimonials.ToList();
             return PartialView(values);
         }
+        public PartialViewResult DefaultEvent()
+        {
+            var values = context.events.ToList();   
+            return PartialView(values);
+        }
     }
 }
