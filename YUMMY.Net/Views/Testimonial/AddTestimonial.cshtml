@@ -1,0 +1,32 @@
+﻿@model YUMMY.Net.Models.Testimonial
+@{
+    ViewBag.Title = "AddTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Testimonial Ekleme </h2>
+
+<form method="post">
+
+    <label>Fotoğraf</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+
+    <label>İsim soyisim</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+
+    <label>MESLEK</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+
+    <label>YORUM</label>
+    @Html.TextBoxFor(x => x.Commend, new { @class = "form-control" })
+    <br />
+
+    <label>Derece</label>
+    @Html.TextBoxFor(x => x.Rating, new { @class = "form-control" })
+    <br />
+
+    <button class=" btn btn-primary">Kaydet</button>
+</form>

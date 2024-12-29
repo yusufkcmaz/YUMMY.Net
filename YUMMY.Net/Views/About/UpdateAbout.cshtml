@@ -1,0 +1,46 @@
+﻿@model  YUMMY.Net.Models.About
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+    <h4>Hakkımızda Güncelleme </h4>
+<br>
+<form method="post">
+
+    <label>Resim Url</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Item1, new { @class = "form-control" })
+    <br />
+
+    <label>Başlık 2 </label>
+    @Html.TextBoxFor(x => x.Item2, new { @class = "form-control" })
+    <br />
+
+    <label>Başlık 3 </label>
+    @Html.TextBoxFor(x => x.Item3, new { @class = "form-control" })
+    <br />
+
+    <label>Açıklama </label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+
+    <label>Video </label>
+    @Html.TextBoxFor(x => x.VideoUrl, new { @class = "form-control" })
+    <br />
+
+    <label>Telefon num </label>
+    @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+    <br />
+
+    <label>Resim 2 </label>
+    @Html.TextBoxFor(x => x.ImageUrl2, new { @class = "form-control" })
+    <br />
+
+    <button type="submit" class=" btn btn-primary">Kaydet</button>
+    
+</form>
+

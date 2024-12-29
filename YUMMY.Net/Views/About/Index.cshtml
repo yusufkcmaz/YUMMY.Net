@@ -1,0 +1,44 @@
+﻿﻿@model List<YUMMY.Net.Models.About>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2>Hakkımızda Alanı</h2>
+<table class="table table-bordered accordion-body  ">
+    <tr>
+        <th># </th>
+        <th>Resim </th>
+        <th> Başlık 1 </th>
+        <th> Başlık 2 </th>
+        <th> Başlık 3 </th>
+        <th> Açıklama </th>
+        <th> Video  </th>
+        <th> Telefon num. </th>
+        <th> Resim 2 </th>
+        <th> Güncelle </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.AboutId</th>
+            <td><img src="@item.ImageUrl" style="width:50px; height:50px" /> </td>
+            <td>@item.Item1</td>
+            <td>@item.Item2</td>
+            <td>@item.Item3</td>
+            <td>@item.Description</td>
+            <td>@item.VideoUrl</td>
+            <td>@item.PhoneNumber</td>
+            <td>@item.ImageUrl2</td>
+
+            <td><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-info">güncelle</a></td>
+        </tr>
+
+    }
+
+
+
+</table>
