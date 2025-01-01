@@ -132,6 +132,7 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -498,6 +499,9 @@
     <Content Include="Views\Testimonial\Index.cshtml" />
     <Content Include="Views\Testimonial\AddTestimonial.cshtml" />
     <Content Include="Views\Default\DefaultEvent.cshtml" />
+    <Content Include="Views\Event\Index.cshtml" />
+    <Content Include="Views\Event\AddEvent.cshtml" />
+    <Content Include="Views\Event\EditEvent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
