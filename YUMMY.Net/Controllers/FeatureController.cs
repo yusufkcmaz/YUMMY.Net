@@ -9,8 +9,8 @@ using YUMMY.Net.Models;
 
 namespace YUMMY.Net.Controllers
 {
-   
-  
+
+
     public class FeatureController : Controller
     {
         // GET: Feature
@@ -41,7 +41,7 @@ namespace YUMMY.Net.Controllers
                 ViewBag.error = "Değerler kaydedilirken bir hata ile karşılaştı";
                 return View(feature);
             }
-            
+
             return RedirectToAction("Index");
         }
 
@@ -49,8 +49,20 @@ namespace YUMMY.Net.Controllers
         {
             var value = context.features.Find(id);
             context.features.Remove(value);
-            context.SaveChanges();  
+            context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+
+
+
+
     }
+
+
+
+
+
+
+
 }

@@ -1,0 +1,70 @@
+﻿﻿
+@model List<YUMMY.Net.Models.Booking>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Home'dan Rezervasyon alanı </h3>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Mail</th>
+        <th>Telefon Num.</th>
+        <th>Rezervasayon Tarihi</th>
+        <th>Kişi Sayısı</th>
+        <th>Mesaj </th>
+        <th>Onay Durumu </th>
+        <th>Rezervasyon Onay!</th>
+        <th>Sil</th>
+
+
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.BookingId</td>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.PhoneNumber</td>
+            <td>@item.BookingDate</td>
+            <td>@item.PersonCount</td>
+            <td>@item.MessageContent</td>
+
+            <td>@(item.ISapproved ? "Onaylandı !" : "Bekliyor !")</td>
+
+            <td>
+                <form action="@Url.Action("ApproveBooking", "DefaultBooking", new { id = item.BookingId })" method="post">
+                    <button type="submit" class="btn btn-success">Onayla</button>
+                </form>
+
+            </td>
+            <td>
+                <form action="@Url.Action("DeleteBooking", "DefaultBooking", new { id = item.BookingId })" method="post">
+                    <button type="submit" class="btn btn-danger">Sil</button>
+                </form>
+
+        </tr>
+    }
+
+</table>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <td>
+            <h4>Özel Rezervasyon Ekle </h4>
+        </td>
+            
+            
+        
+        <td><a href="~/DefaultBooking/AddBooking/" class="btn btn-primary">Rezervasyon Ekle</a></td>
+        
+
+       
+    </tr>
+</table>

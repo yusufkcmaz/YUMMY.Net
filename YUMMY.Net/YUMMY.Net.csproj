@@ -130,7 +130,9 @@
     <Compile Include="Context\YummyContext.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\ChefsController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\DefaultBookingController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
@@ -502,6 +504,13 @@
     <Content Include="Views\Event\Index.cshtml" />
     <Content Include="Views\Event\AddEvent.cshtml" />
     <Content Include="Views\Event\EditEvent.cshtml" />
+    <Content Include="Views\Default\DefaultChefs.cshtml" />
+    <Content Include="Views\Chefs\Index.cshtml" />
+    <Content Include="Views\Chefs\AddChef.cshtml" />
+    <Content Include="Views\Chefs\UpdateChef.cshtml" />
+    <Content Include="Views\Default\DefaultBooking.cshtml" />
+    <Content Include="Views\DefaultBooking\Index.cshtml" />
+    <Content Include="Views\DefaultBooking\AddBooking.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

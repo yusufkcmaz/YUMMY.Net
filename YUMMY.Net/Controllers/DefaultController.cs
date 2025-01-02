@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using YUMMY.Net.Context;
+using YUMMY.Net.Models;
 
 namespace YUMMY.Net.Controllers
 {
@@ -50,6 +51,26 @@ namespace YUMMY.Net.Controllers
         {
             var values = context.events.ToList();   
             return PartialView(values);
+        }
+
+        public PartialViewResult DefaultChefs()
+        {
+            var values = context.Chefs.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult DefaultBooking()
+        {
+            return PartialView();
+        }
+      
+        
+        [HttpPost]
+        public string DefaultAddBooking(Booking booking)
+        {
+            context.bookings.Add(booking);
+            context.SaveChanges();
+            return "Rezervasyonunuz oluşturldu";
         }
     }
 }

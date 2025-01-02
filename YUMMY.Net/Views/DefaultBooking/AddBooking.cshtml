@@ -1,0 +1,36 @@
+﻿@model YUMMY.Net.Models.Booking
+@{
+    ViewBag.Title = "AddBooking";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Rezervasyon EKLE</h2>
+
+<form method="post">
+    <label>Ad Soyad</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+
+    <label>Mail</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br />
+
+    <label>Telefon Num.</label>
+    @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+    <br />
+
+    <label>Kişi Sayısı </label>
+    @Html.TextBoxFor(x => x.PersonCount, new { @class = "form-control" })
+    <br />
+
+
+    <label>Mesaj</label>
+    @Html.TextBoxFor(x => x.MessageContent, new { @class = "form-control" })
+    <br />
+
+        
+    <label>Rezervasyon Tarihi</label>
+    @Html.TextBoxFor(x => x.BookingDate, new { @class = "form-control", type = "date", required = "required" })
+
+    <button class=" btn btn-primary">Kaydet</button>
+</form>
