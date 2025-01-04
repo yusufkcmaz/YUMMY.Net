@@ -24,7 +24,7 @@ namespace YUMMY.Net.Controllers
             return PartialView(values);
         }
 
-        public PartialViewResult DefaultAbout() 
+        public PartialViewResult DefaultAbout()
         {
             var values = context.Abouts.ToList();
             return PartialView(values);
@@ -38,7 +38,7 @@ namespace YUMMY.Net.Controllers
 
         public PartialViewResult DefaultService()
         {
-           var values = context.Services.ToList();
+            var values = context.Services.ToList();
             return PartialView(values);
         }
 
@@ -49,7 +49,7 @@ namespace YUMMY.Net.Controllers
         }
         public PartialViewResult DefaultEvent()
         {
-            var values = context.events.ToList();   
+            var values = context.events.ToList();
             return PartialView(values);
         }
 
@@ -63,8 +63,8 @@ namespace YUMMY.Net.Controllers
         {
             return PartialView();
         }
-      
-        
+
+
         [HttpPost]
         public string DefaultAddBooking(Booking booking)
         {
@@ -72,5 +72,38 @@ namespace YUMMY.Net.Controllers
             context.SaveChanges();
             return "Rezervasyonunuz oluşturldu";
         }
+
+
+        public PartialViewResult DefaultGallery()
+        {
+            var values = context.photoGalleries.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult DefaultContact()
+        {
+            var values = context.ContactInfos.ToList();
+            return PartialView(values);
+        }
+
+
+
+        public PartialViewResult DefaultMessage()
+        {
+            return PartialView();
+        }
+
+
+        [HttpPost]
+        public string DefaultSendMessage(Message mesajj)
+        {
+            context.messages.Add(mesajj);
+          
+            context.SaveChanges();
+            return "Mesajınız Gönderildi.";
+
+        }
+
+               
     }
 }
