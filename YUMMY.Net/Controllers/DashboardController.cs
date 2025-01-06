@@ -22,8 +22,10 @@ namespace YUMMY.Net.Controllers
 
             //ViewBag.MinPrice = context.products.Min(x => x.Price);
             ViewBag.cheapestPrice = context.products.OrderBy(x => x.Price).Select(x => x.ProductName).FirstOrDefault();
-          
-            return View();
+
+            var value = context.products.OrderByDescending(Z => Z.ProductId).ToList();
+
+            return View(value);
         }
     }
 }

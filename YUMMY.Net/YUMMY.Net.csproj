@@ -131,6 +131,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\ChefsController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultBookingController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -139,6 +140,8 @@
     <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Controllers\UILayoutController.cs" />
@@ -517,6 +520,13 @@
     <Content Include="Views\Gallery\UpdateGallery.cshtml" />
     <Content Include="Views\Default\DefaultContact.cshtml" />
     <Content Include="Views\Default\DefaultMessage.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Contact\UpdateContact.cshtml" />
+    <Content Include="Views\Message\Index.cshtml" />
+    <Content Include="Views\Message\Details.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Product\UpdateProduct.cshtml" />
+    <Content Include="Views\Product\CreateProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

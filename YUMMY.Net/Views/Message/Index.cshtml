@@ -1,0 +1,61 @@
+﻿@model List<YUMMY.Net.Models.Message>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Gelen Mesajlar</h2>
+
+<table class=" table table-bordered">
+
+    <tr>
+        <td>#</td>
+        <td>İsim</td>
+        <td>Mail</td>
+        <td>Konu</td>
+        <td>Mesaj </td>
+        <td>Durum</td>
+        <td>Sil</td>
+        <td>Mesaj Detay</td>
+
+        @*<td>Mesaj Oku</td>*@
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.MessageID</th>
+            <th>@item.Name</th>
+            <th>@item.Email</th>
+            <th>@item.Subject</th>
+            <th>@item.MessageContent</th>
+
+
+
+            @if (item.IsRead == false)
+            {
+
+                <td><a href="~/Message/IsRead/@item.MessageID" class="btn btn-secondary">Durum Onay</a></td>
+            }
+            else
+            {
+                <td><span style="background-color:snow">Okundu!</span></td>
+            }
+
+
+            <td><a href="~/Message/DeleteMessage/@item.MessageID" class="btn btn-danger">Sil</a></td>
+
+            @*<td><a href="~/Details/Message/@item.MessageID" class="btn btn-outline-success">Mesaj Detayları</a></td>*@
+
+        <td>
+            <a href="@Url.Action("Details", "Message" , new { id = item.MessageID })   " class="btn btn-primary">Detay</a>
+        </td></tr>
+    }
+
+
+
+    </table>
+
+        
+   

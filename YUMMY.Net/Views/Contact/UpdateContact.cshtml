@@ -1,0 +1,36 @@
+﻿@model YUMMY.Net.Models.ContactInfo
+@{
+    ViewBag.Title = "UpdateContact";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>İletişim Güncelleme</h2>
+
+
+<form method="post">
+    @Html.HiddenFor(m => m.ContactInfoID)
+
+
+    <label>Adres</label> 
+    @Html.TextBoxFor(x => x.ADDRESS, new { @class = "form-control" })
+    <br />
+
+    <label>Email</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br />
+
+    <label>Telefon num.</label>
+    @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+    <br />
+
+    <label>Harita</label>
+    @Html.TextBoxFor(x => x.MapUrld, new { @class = "form-control" })
+    <br />
+
+    <label>Mesai Saatleri</label>
+    @Html.TextBoxFor(x => x.OpenHours, new { @class = "form-control" })
+    <br />
+
+    <button type="submit" class=" btn btn-primary">Kaydet</button>
+
+</form>
