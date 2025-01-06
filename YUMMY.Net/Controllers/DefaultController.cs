@@ -23,7 +23,7 @@ namespace YUMMY.Net.Controllers
             var values = context.features.ToList();
             return PartialView(values);
         }
-
+         
         public PartialViewResult DefaultAbout()
         {
             var values = context.Abouts.ToList();
@@ -100,7 +100,7 @@ namespace YUMMY.Net.Controllers
             context.messages.Add(mesajj);
           
             context.SaveChanges();
-            return "Mesajınız Gönderildi.";
+            return "Mesajınız Gönderildi. Geri Dönüş Yapılacak";
 
         }
 
