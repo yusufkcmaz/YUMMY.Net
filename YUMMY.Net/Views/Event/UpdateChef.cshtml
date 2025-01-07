@@ -1,15 +1,11 @@
 ﻿@model YUMMY.Net.Models.Chef
-
 @{
     ViewBag.Title = "UpdateChef";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h2>Şef Güncelleme </h2>
-
-
 <form method="post">
-    @Html.HiddenFor(x => x.ChefId)
+    @Html.HiddenFor(m => m.ChefId)
 
 
     <label>Resim Url</label>

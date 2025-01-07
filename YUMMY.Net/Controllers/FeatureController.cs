@@ -54,13 +54,56 @@ namespace YUMMY.Net.Controllers
         }
 
 
+        public ActionResult UpdateFeature()
+        {
+            var value = context.features.FirstOrDefault();
+            return View(value);
+        }
+
+
+
+        [HttpPost]
+        public ActionResult UpdateFeature(Feature model)
+        {
+
+            if (ModelState.IsValid)
+            {
+                var value = context.features.FirstOrDefault();
+
+                if (value != null)
+                {
+
+                    value.ImageUrl = model.ImageUrl;
+                    value.Title = model.Title;
+                    value.Description = model.Description;
+                    value.VideoUrl = model.VideoUrl;
+
+
+                    context.SaveChanges();
+
+                }
+                else
+                {
+
+                    ModelState.AddModelError("", "Veri bulamadı.");
+                }
+                return RedirectToAction("Index", "Feature");
+
+            }
+
+            return View("Index");
+
+
+
+
+
+        }
+
+
+
+
+
+
 
     }
-
-
-
-
-
-
-
 }

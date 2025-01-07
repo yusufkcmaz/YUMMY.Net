@@ -45,10 +45,19 @@ namespace YUMMY.Net.Controllers
             return RedirectToAction("Index");
         }
 
+
+        public ActionResult UpdateChef(int id )
+        {
+            var value = context.Chefs.FirstOrDefault(x=> x.ChefId ==id);
+            return View(value);
+        }
+
+        [HttpPost]
+
         public ActionResult UpdateChef(Chef Yenıyıl)
         {
 
-            var value = context.Chefs.Find(Yenıyıl.ChefId);
+            var value = context.Chefs.FirstOrDefault(x=> x.ChefId==Yenıyıl.ChefId);
 
             value.ImageUrl = Yenıyıl.ImageUrl;
             value.Name = Yenıyıl.Name;

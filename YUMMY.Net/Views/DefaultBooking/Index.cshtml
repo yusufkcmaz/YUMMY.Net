@@ -6,7 +6,7 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h3>Home'dan Rezervasyon alanı </h3>
+<h3> Rezervasyon alanı </h3>
 
 <table class="table table-bordered">
     <tr>
@@ -21,8 +21,8 @@
         <th>Rezervasyon Onay!</th>
         <th>Sil</th>
 
-
-
+        <!--eğdirmem başımı kimselere ama sana yerle bir oldum-->
+        
     </tr>
 
     @foreach (var item in Model)
@@ -31,8 +31,8 @@
             <td>@item.BookingId</td>
             <td>@item.Name</td>
             <td>@item.Email</td>
-            <td>@item.PhoneNumber</td>
-            <td>@item.BookingDate</td>
+            <td>@item.PhoneNumber </td>
+            <td>@item.BookingDate.ToString("dd/MM/yyyy")</td>      
             <td>@item.PersonCount</td>
             <td>@item.MessageContent</td>
 
